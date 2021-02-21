@@ -23,8 +23,20 @@ const Form = () => {
     const { mascota, propietario, fecha, hora, sintomas } = cita;
     
     //Sending data
-    const handleSubmit = () => {
-        alert('Sending data...')
+    const handleSubmit = e => {
+        e.preventDefault();
+        
+        //Validating the appointment. NOTE: Trim removes blanks
+        if(mascota.trim() === '' || propietario.trim() === '' || fecha.trim() === '' || hora.trim() === '' || sintomas.trim() === '') {
+            console.log('ERR')
+            return;
+        }
+        console.log('adding...')
+        //Assign an id
+
+        //Create appointment in main state
+
+        //Reset form
     }
 
     return ( 
