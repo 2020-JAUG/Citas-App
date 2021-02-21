@@ -11,7 +11,7 @@ const Form = () => {
                 type='text'
                 name='mascota'
                 className='u-full-width'
-                placeholder='Nombre mascota'
+                placeholder='Nombre Mascota'
             /> 
 
             <label>Nombre del Dueño</label>
@@ -19,7 +19,7 @@ const Form = () => {
                 type='text'
                 name='propietario'
                 className='u-full-width'
-                placeholder='Nombre del dueño'
+                placeholder='Nombre del Dueño'
             />  
 
             <label>Fecha</label>
