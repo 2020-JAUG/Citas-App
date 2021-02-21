@@ -6,20 +6,20 @@ const Form = () => {
         <h2>Pedir Cita</h2>
 
         <form>
-            <label>Nombre de tú Mascota</label>
+            <label>Nombre de tu mascota</label>
             <input
                 type='text'
                 name='mascota'
                 className='u-full-width'
-                placeholder='Nombre Mascota'
+                placeholder='Nombre mascota'
             /> 
 
-            <label>Nombre del Dueño</label>
+            <label>Nombre del dueño</label>
             <input
                 type='text'
                 name='propietario'
                 className='u-full-width'
-                placeholder='Nombre del Dueño'
+                placeholder='Nombre del dueño'
             />  
 
             <label>Fecha</label>
