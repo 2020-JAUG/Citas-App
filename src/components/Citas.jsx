@@ -9,9 +9,9 @@ const Citas = ({ newCitas, eliminarCita }) => (
         <p>Sintomas: <span>{newCitas.sintomas}</span> </p>
 
         <button 
-            className="button eliminar u-full-width"
+            className="u-full-width button2"
             onClick={ () => eliminarCita(newCitas.id) }
-        >Eliminar &times;</button>
+        >Eliminar cita</button>
     </div>
  );
  
