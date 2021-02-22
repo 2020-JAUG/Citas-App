@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Form from './components/Form.jsx';
 import Citas from './components/Citas.jsx';
 
@@ -6,6 +6,11 @@ import Citas from './components/Citas.jsx';
 function App() {
   //Array of appointments
   const [citas, setCitas] = useState([]);
+
+  //UseEffect to update when there are changes on the component
+  useEffect( () => {
+    console.log('Ready documents or something happen with the appointments')
+  }, [citas]);
 
   //Function to take the current appointments and take the new ones
   const crearCita = cita => { setCitas ([ ...citas, cita ])};

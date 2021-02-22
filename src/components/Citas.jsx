@@ -2,11 +2,11 @@ import React from 'react';
 
 const Citas = ({ newCitas, eliminarCita }) => ( 
     <div className="cita">
-        <p>Mascota: <spna>{newCitas.mascota}</spna> </p>
-        <p>Dueño: <spna>{newCitas.propietario}</spna> </p>
-        <p>Fecha: <spna>{newCitas.fecha}</spna> </p>
-        <p>Hora: <spna>{newCitas.hora}</spna> </p>
-        <p>Sintomas: <spna>{newCitas.sintomas}</spna> </p>
+        <p>Mascota: <span>{newCitas.mascota}</span> </p>
+        <p>Dueño: <span>{newCitas.propietario}</span> </p>
+        <p>Fecha: <span>{newCitas.fecha}</span> </p>
+        <p>Hora: <span>{newCitas.hora}</span> </p>
+        <p>Sintomas: <span>{newCitas.sintomas}</span> </p>
 
         <button 
             className="button eliminar u-full-width"
