@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 
-const Form = () => {
+const Form = ({crearCita}) => {
 
     //Creamos el state de citas
     const [cita, setActualizarCita] = useState({
@@ -16,10 +16,7 @@ const Form = () => {
 
     //Function to upgrade the input, and We use array destructuring
     const handleChange = e => {
-        setActualizarCita({
-            ...cita,
-            [e.target.name]: e.target.value
-        })
+        setActualizarCita({ ...cita, [e.target.name]: e.target.value})
     };
 
     //Extract the values
@@ -42,6 +39,7 @@ const Form = () => {
         cita.id= uuidv4();
 
         //Create appointment in main state
+        crearCita(cita);
 
         //Reset form
     };
