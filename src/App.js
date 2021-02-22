@@ -2,14 +2,23 @@ import React, { useState, useEffect } from 'react';
 import Form from './components/Form.jsx';
 import Citas from './components/Citas.jsx';
 
-
 function App() {
+  //Appointments in local storage
+  let citasIniciales = JSON.parse(localStorage.getItem('citas'));
+  if(!citasIniciales) { 
+    citasIniciales = []; 
+  };
+
   //Array of appointments
-  const [citas, setCitas] = useState([]);
+  const [citas, setCitas] = useState(citasIniciales);
 
   //UseEffect to update when there are changes on the component
   useEffect( () => {
-    console.log('Ready documents or something happen with the appointments')
+    if(citasIniciales) {
+      localStorage.setItem('citas', JSON.stringify(citas));
+    } else {
+      localStorage.setItem('citas', JSON.stringify([]));
+    };
   }, [citas]);
 
   //Function to take the current appointments and take the new ones
