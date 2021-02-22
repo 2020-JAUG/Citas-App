@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { v4 as uuidv4 } from 'uuid';
 
 const Form = () => {
 
@@ -32,9 +33,13 @@ const Form = () => {
         if(mascota.trim() === '' || propietario.trim() === '' || fecha.trim() === '' || hora.trim() === '' || sintomas.trim() === '') {
             setError(true)
             return;
-        }
+        };
+
+        //Remove error message
+        setError(false);
 
         //Assign an id
+        cita.id= uuidv4();
 
         //Create appointment in main state
 
