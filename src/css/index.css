@@ -8,7 +8,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
-  background-image: url(./components/img/salaDeEspera.png);
+  background-image: url(../components/img/salaDeEspera.png);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
