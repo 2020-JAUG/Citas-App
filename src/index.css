@@ -100,7 +100,7 @@ input[type="time"] {
 
 .alerta-error {
   background-color: white;
-  color: rgb(233, 41, 41);
+  color: rgba(236, 16, 16, 0.982);
   padding: 1rem;
   font-size: 2rem;
   text-transform: uppercase;
