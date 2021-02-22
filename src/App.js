@@ -12,9 +12,10 @@ function App() {
 
   //Function remove appoinment by you id
   const eliminarCita = id => {
-    console.log(id)
-  }
-
+    const nuevasCitas = citas.filter(cita => cita.id !== id );
+    setCitas(nuevasCitas);
+  };
+  
   return (
   <>
     <h1>Administrador de pacientes</h1>
@@ -39,6 +40,6 @@ function App() {
     </div>
   </>
   );
-}
+};
 
 export default App;
