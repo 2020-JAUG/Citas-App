@@ -14,6 +14,8 @@ function App() {
 
   //UseEffect to update when there are changes on the component
   useEffect( () => {
+    let citasIniciales = JSON.parse(localStorage.getItem('citas'));
+
     if(citasIniciales) {
       localStorage.setItem('citas', JSON.stringify(citas));
     } else {
