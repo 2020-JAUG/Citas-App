@@ -10,6 +10,8 @@ const Form = () => {
         hora: '',
         sintomas: ''
     });
+    //Second state
+    const [error, setError] = useState(false);
 
     //Function to upgrade the input, and We use array destructuring
     const handleChange = e => {
@@ -28,20 +30,22 @@ const Form = () => {
         
         //Validating the appointment. NOTE: Trim removes blanks
         if(mascota.trim() === '' || propietario.trim() === '' || fecha.trim() === '' || hora.trim() === '' || sintomas.trim() === '') {
-            console.log('ERR')
+            setError(true)
             return;
         }
-        console.log('adding...')
+
         //Assign an id
 
         //Create appointment in main state
 
         //Reset form
-    }
+    };
 
     return ( 
         <>
         <h2>Pedir Cita</h2>
+
+        { error ? <p className="alerta-error">Todos los campos son obligatorios</p> : null }
 
         <form onSubmit={handleSubmit}>
             <label>Nombre de tu mascota</label>
