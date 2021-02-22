@@ -4,11 +4,16 @@ import Citas from './components/Citas.jsx';
 
 
 function App() {
-//Array of appointments
+  //Array of appointments
   const [citas, setCitas] = useState([]);
 
   //Function to take the current appointments and take the new ones
   const crearCita = cita => { setCitas ([ ...citas, cita ])};
+
+  //Function remove appoinment by you id
+  const eliminarCita = id => {
+    console.log(id)
+  }
 
   return (
   <>
@@ -23,7 +28,11 @@ function App() {
         <div className="one-half column">
           <h2>Citas</h2>
               {citas.map(cita => (
-                <Citas citas={cita} key={cita.id}/>
+                <Citas 
+                  newCitas={cita} 
+                  key={cita.id}
+                  eliminarCita={eliminarCita}
+                  />
             ))}
         </div>
       </div>
