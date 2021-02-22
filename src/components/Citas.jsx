@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
 const Citas = ({ newCitas, eliminarCita }) => ( 
     <div className="cita">
         <p>Mascota: <span>{newCitas.mascota}</span> </p>

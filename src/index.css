@@ -1,5 +1,4 @@
 html {
-  overflow:hidden;
   height:100%;
   padding: 0;
   margin: 0;
@@ -9,67 +8,71 @@ body {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
-  background-image: linear-gradient(-225deg, #a3a388 0%, #afcfc1e0 52%, #6b69518e 100%);
-  min-height: 100%;
+  background-image: url(./components/img/salaDeEspera.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
   padding-bottom: 5rem;
 }
 
 h1, h2  {
-  color: rgb(80, 82, 79);
-  padding: 0rem 0;
+  color: rgba(8, 8, 8, 0.753);
+  padding: 1rem 0;
   text-align: center;
   text-transform: uppercase;
   font-family: 'Staatliches', cursive;
   letter-spacing: 1px;
 }
 
+h2 {
+  color: rgba(8, 8, 8, 0.701);
+}
+
 .button {
-  background-image: linear-gradient(-225deg, #cbcb7e 0%, #9ddac0e0 52%, #e7e08a8e 100%);
-  border: 1px solid #696256;
-  color: rgb(24, 34, 22);
-}
-
-.lista-citas .media {
-  border-bottom: 1px solid #f3f3f3;
-  padding-bottom: 3rem;
-}
-
-.lista-citas .media:last-of-type{
-  border-bottom: 0;
-}
-
-.lista-citas .media-body p {
-  margin: 0;
-}
-
-.lista-citas .media-body button {
-  margin-top: 1rem!important;
-}
-
-.lista-citas .media-body span {
-  font-weight: bold;
+  background-image: linear-gradient(-225deg, #b19e7d 0%, #819b8f 52%, #e4e2ce 100%);
+  border: 1px solid #b6b1a8;
+  color: rgb(10, 10, 10);
 }
 
 label {
-  color: rgb(57, 73, 54);
+  color: rgb(0, 0, 0);
+
 }
 
 input[type="date"],
 input[type="time"] {
     height: 38px;
     padding: 6px 10px;
-    background-color: rgb(243, 240, 240);
-    border: 1px solid #bebbbb;
+    background-color: rgb(246, 234, 234);
+    border: 1px solid #ccc3c3;
     border-radius: 4px;
+    color: #1b181a;
     box-shadow: none;
     box-sizing: border-box;
 }
 
 .cita {
+  background: rgb(249, 246, 246);
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  border-radius: 3px;
   padding: 2rem;
-  background: rgb(242, 238, 238);
-  border-bottom: 1px solid #cfcbcb;
-  color: black;
+  background: rgb(243, 240, 240);
+  border-bottom: 1px solid #ede7e7;
+  color: rgb(14, 13, 13);
+}
+
+.one-half column {
+  float: left;
+  width: calc(30% - 20px);
+  height: auto;
+  background: black;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
 }
 
 .cita p {
@@ -100,17 +103,67 @@ input[type="time"] {
 }
 
 .button2 {
-  background-image: linear-gradient(-225deg, #cbcb7e 0%, #9ddac0e0 52%, #e7e08a8e 100%);
-  border: 1px solid #696256;
-  color: rgb(24, 34, 22);
+  background-image: linear-gradient(-225deg, #b19e7d 0%, #9baca4 52%, #e4e2ce 100%);
+  border: 1px solid #b6b1a8;
+  color: rgb(10, 10, 10);
 }
 
 .alerta-error {
   background-color: white;
-  color: rgba(236, 16, 16, 0.982);
+  color: rgba(196, 20, 20, 0.982);
   padding: 1rem;
   font-size: 2rem;
   text-transform: uppercase;
   text-align: center;
   font-family: 'Staatliches', '';
+  border-radius: 3px;
+}
+
+.redes-Container{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  display:flex;
+  height: 20vh;
+  align-items: center;
+  justify-content: center;
+}
+.root{
+  --linkedin:rgb(124, 158, 223);
+  --github:rgb(17, 17, 17);
+}
+.redes-Container ul li {
+  display: inline-block;
+  margin: 7px;
+  width: 50px;
+  height: 50px;
+  text-align:center;
+}
+
+.redes-Container ul li a {
+  display:block;
+  padding:0 10px;
+  background:transparent;
+  color:rgba(4, 4, 4, 0.907);
+  line-height: 50px;
+  font-size: 25px;
+  transition: .2s;
+}
+
+.redes-Container ul:hover a {
+  filter:blur(0.2px);
+}
+
+.redes-Container ul li a:hover{
+  transform: translateY(-3px) scale(1.15);
+  box-shadow: 0px 0px 0px rgba(31, 28, 28, 0);
+  filter:none;
+}
+
+.redes-Container ul li .linkedin:hover{
+  color: var(--linkedin);
+}
+
+.redes-Container ul li .github:hover{
+  color: var(--github);
 }
