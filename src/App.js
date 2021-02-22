@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Form from './components/Form.jsx';
+import Citas from './components/Citas.jsx';
 
 
 function App() {
@@ -7,9 +8,7 @@ function App() {
   const [citas, setCitas] = useState([]);
 
   //Function to take the current appointments and take the new ones
-  const crearCita = cita => {
-    setCitas([ ...citas, cita ]);
-  };
+  const crearCita = cita => { setCitas ([ ...citas, cita ])};
 
   return (
   <>
@@ -17,11 +16,15 @@ function App() {
 
     <div className="container">
       <div className="row">
-        <div className="one-half column">
-            <Form crearCita={crearCita}/>
+        <div className="one-half column"> 
+          <Form crearCita={crearCita}/>
         </div>
+
         <div className="one-half column">
-            2
+          <h2>Citas</h2>
+              {citas.map(cita => (
+                <Citas citas={cita} key={cita.id}/>
+            ))}
         </div>
       </div>
     </div>
